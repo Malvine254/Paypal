@@ -1,0 +1,22 @@
+{
+    "name": "home/paypal",
+    "description": "paypalcomposer/integration",
+    "type": "proprietary",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Home\\Paypal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "melo254",
+            "email": "owuormalvine75@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "paypal/paypal-server-sdk": "^0.6.1",
+        "paypal/paypal-checkout-sdk": "^1.0"
+    }
+}
