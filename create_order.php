@@ -1,24 +1,26 @@
 <?php
 require 'vendor/autoload.php';
 
+// Import the required PayPal classes
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
-use PayPalCheckoutSdk\Core\LiveEnvironment;
+use PayPalCheckoutSdk\Core\ProductionEnvironment;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
 
 if (isset($_POST['create_order'])) {
-    // PayPal Live API credentials
+    // PayPal credentials
     $clientId = "AcVSO26RLnvRRBvU2Qk1siReT_vlk9KIR-77DMeV7K4JD_Xkt7zXxZFhP48RCXjDZK8OmAetTIyIErMj";
     $clientSecret = "EII67bD0IKKC1aBrbqfd9wN_b5h7qqCsvFwdKDIo-1Jyf4hu00KIlx4IYm_XPq5yAKArAv2PipVvje4B";
 
-    // Set up PayPal client
-    $environment = new LiveEnvironment($clientId, $clientSecret);
+    // Create PayPal Environment
+    $environment = new ProductionEnvironment($clientId, $clientSecret);
     $client = new PayPalHttpClient($environment);
 
+    // Retrieve the amount from the POST request
     $amount = $_POST['amount'];
 
     // Create a new order
     $request = new OrdersCreateRequest();
-    $request->prefer('return=representation');
+    $request->prefer('return=representation'); // Request full response
     $request->body = [
         "intent" => "CAPTURE",
         "purchase_units" => [
@@ -30,8 +32,8 @@ if (isset($_POST['create_order'])) {
             ]
         ],
         "application_context" => [
-            "return_url" => "https://hr.armely.com/payment_success.php", // Ensure HTTPS
-            "cancel_url" => "https://hr.armely.com/payment_cancel.php" // Ensure HTTPS
+            "return_url" => "https://yourwebsite.com/payment_success.php", // Replace with your success URL
+            "cancel_url" => "https://yourwebsite.com/payment_cancel.php"   // Replace with your cancel URL
         ]
     ];
 
@@ -47,8 +49,9 @@ if (isset($_POST['create_order'])) {
             }
         }
     } catch (Exception $e) {
+        // Handle errors
         echo "<h1>Error Creating Order</h1>";
-        echo "<p>" . htmlspecialchars($e->getMessage()) . "</p>";
+        echo "<p>Error: " . htmlspecialchars($e->getMessage()) . "</p>";
         exit();
     }
 }

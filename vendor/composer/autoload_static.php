@@ -15,16 +15,10 @@ class ComposerStaticInit0d11be05bb2390aba30c34b6ee6bf3cf
         array (
             'Unirest\\' => 8,
         ),
-        'S' => 
-        array (
-            'Sample\\' => 7,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
             'PaypalServerSdkLib\\' => 19,
-            'PayPalHttp\\' => 11,
-            'PayPalCheckoutSdk\\' => 18,
         ),
         'H' => 
         array (
@@ -46,10 +40,6 @@ class ComposerStaticInit0d11be05bb2390aba30c34b6ee6bf3cf
         array (
             0 => __DIR__ . '/..' . '/apimatic/unirest-php/src',
         ),
-        'Sample\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/paypal/paypal-checkout-sdk/samples',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
@@ -57,14 +47,6 @@ class ComposerStaticInit0d11be05bb2390aba30c34b6ee6bf3cf
         'PaypalServerSdkLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/paypal/paypal-server-sdk/src',
-        ),
-        'PayPalHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/paypal/paypalhttp/lib/PayPalHttp',
-        ),
-        'PayPalCheckoutSdk\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/paypal/paypal-checkout-sdk/lib/PayPalCheckoutSdk',
         ),
         'Home\\Paypal\\' => 
         array (
