@@ -6,8 +6,8 @@ use PayPalCheckoutSdk\Core\SandboxEnvironment;
 use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
 
 // PayPal API credentials
-$clientId = "Ac-L5ddC3L6IEWPodnswQtN24F4LiDDhRKi0raDHl_pHUExT1u17KVNJV1ohZDI2c9tX7x9rNFCpKU4A";
-$clientSecret = "EL6LLdkLbuQL-kVY1OpZi9xSY_rxOsxEzi4bIc4N-wFdtEXH4B8waINkXSufzMGpVIqnLAdOJvxu343j";
+$clientId = "AcVSO26RLnvRRBvU2Qk1siReT_vlk9KIR-77DMeV7K4JD_Xkt7zXxZFhP48RCXjDZK8OmAetTIyIErMj";
+$clientSecret = "EII67bD0IKKC1aBrbqfd9wN_b5h7qqCsvFwdKDIo-1Jyf4hu00KIlx4IYm_XPq5yAKArAv2PipVvje4B";
 
 // Set up PayPal client
 $environment = new SandboxEnvironment($clientId, $clientSecret);
