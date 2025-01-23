@@ -2,17 +2,16 @@
 require 'vendor/autoload.php';
 
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
-use PayPalCheckoutSdk\Core\SandboxEnvironment;
+use PayPalCheckoutSdk\Core\LiveEnvironment;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
-if (isset($_POST['create_order'])) {
-    
 
-    // PayPal API credentials
-    $clientId = "Ac-L5ddC3L6IEWPodnswQtN24F4LiDDhRKi0raDHl_pHUExT1u17KVNJV1ohZDI2c9tX7x9rNFCpKU4A";
-    $clientSecret = "EL6LLdkLbuQL-kVY1OpZi9xSY_rxOsxEzi4bIc4N-wFdtEXH4B8waINkXSufzMGpVIqnLAdOJvxu343j";
+if (isset($_POST['create_order'])) {
+    // PayPal Live API credentials
+    $clientId = "AcVSO26RLnvRRBvU2Qk1siReT_vlk9KIR-77DMeV7K4JD_Xkt7zXxZFhP48RCXjDZK8OmAetTIyIErMj";
+    $clientSecret = "EII67bD0IKKC1aBrbqfd9wN_b5h7qqCsvFwdKDIo-1Jyf4hu00KIlx4IYm_XPq5yAKArAv2PipVvje4B";
 
     // Set up PayPal client
-    $environment = new SandboxEnvironment($clientId, $clientSecret);
+    $environment = new LiveEnvironment($clientId, $clientSecret);
     $client = new PayPalHttpClient($environment);
 
     $amount = $_POST['amount'];
@@ -31,8 +30,8 @@ if (isset($_POST['create_order'])) {
             ]
         ],
         "application_context" => [
-        "return_url" => "http://hr.armely.com/payment_success.php",
-        "cancel_url" => "http://hr.armely.com/payment_success.php"// Replace with your cancel URL
+            "return_url" => "https://hr.armely.com/payment_success.php", // Ensure HTTPS
+            "cancel_url" => "https://hr.armely.com/payment_cancel.php" // Ensure HTTPS
         ]
     ];
 
