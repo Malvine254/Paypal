@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'home/paypal',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '3a651233f7f7511ba9696a5aef98223c81746d57',
         'type' => 'proprietary',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'home/paypal' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '3a651233f7f7511ba9696a5aef98223c81746d57',
             'type' => 'proprietary',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
