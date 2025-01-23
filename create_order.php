@@ -32,8 +32,8 @@ if (isset($_POST['create_order'])) {
             ]
         ],
         "application_context" => [
-            "return_url" => "https://yourwebsite.com/payment_success.php", // Replace with your success URL
-            "cancel_url" => "https://yourwebsite.com/payment_cancel.php"   // Replace with your cancel URL
+            "return_url" => "https://armely.com/payment_success.php", // Replace with your success URL
+            "cancel_url" => "https://armely.com/payment_cancel.php"   // Replace with your cancel URL
         ]
     ];
 
