@@ -31,8 +31,8 @@ if (isset($_POST['create_order'])) {
             ]
         ],
         "application_context" => [
-            "return_url" => "https://newabcd1234.ngrok.io/payment_success.php",
-            "cancel_url" => "https://newabcd1234.ngrok.io/payment_cancel.php"
+        "return_url" => "http://hr.armely.com/payment_success.php",
+        "cancel_url" => "http://hr.armely.com/payment_success.php"// Replace with your cancel URL
         ]
     ];
 
